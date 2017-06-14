@@ -1,8 +1,8 @@
-var db = require('../database/db');
+var dbCfg = require('../database/db');
 
 var query = function(sql,params,callback){
      //连接池
-    db.pool.getConnection(function(err, connection) {
+    dbCfg.pool.getConnection(function(err, connection) {
         if (err) {
             callback(true);
             return;
