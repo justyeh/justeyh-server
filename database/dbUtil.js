@@ -1,6 +1,6 @@
-var db = require('../database/db');
+var pool = require('../database/pool');
 
-var pool = function(sql,params,callback){
+var query = function(sql,params,callback){
      //连接池
     db.pool.getConnection(function(err, connection) {
         if (err) {
@@ -20,4 +20,4 @@ var pool = function(sql,params,callback){
     });
 }
 
-module.exports.pool = pool;
+module.exports.query = query;
