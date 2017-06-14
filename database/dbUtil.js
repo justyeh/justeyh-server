@@ -1,4 +1,4 @@
-var pool = require('../database/pool');
+var db = require('../database/db');
 
 var query = function(sql,params,callback){
      //连接池
